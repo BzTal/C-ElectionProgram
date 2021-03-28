@@ -56,7 +56,7 @@ int main()
 		{
 		case NewElectionRound:
 		{
-			//NOTE: VALIDATION CHECK IS IN THE CTOR AND IN THE FUNCTIONS/MAIN AS INSTRUCTED BY MOSHE IN THE FORUM! ENTER FULL DATE TO SEE ERROR 
+			//NOTE: VALIDATION CHECK IS IN THE CTOR AND IN THE FUNCTIONS/MAIN AS INSTRUCTED BY THE PROFFESOR IN THE FORUM! ENTER FULL DATE TO SEE ERROR 
 			cout << "please enter the election's month" << endl;
 		    cin >> month;
 			while (month < 1 || month>12)

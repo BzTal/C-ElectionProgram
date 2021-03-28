@@ -177,42 +177,9 @@ namespace elections
 			}
 		};
 
-		//template<class S>
-		//bool comp(S a, S b)
-		//{
-		//	if (a <= b)//if a is smaller than b or equal to b return false
-		//	{
-		//		return false;
-		//	}
-		//	else
-		//		return true;
-		//}
+		
 
-		//template<>
-		//bool comp(list<Citizen*> a, list<Citizen*> b)
-		//{
-		//	if (a.size() <= b.size())//if a is shorter than b or equal to b return false
-		//	{
-		//		return false;
-		//	}
-		//	else
-		//		return true;
-		//}
-
-
-		template <class T>
-		void mySort(bool (*comp)(T,T))
-		{
-			iterator curr=begin();
-			for (curr = begin(); curr != end(); curr++)
-			{
-				for (iterator curr1 = curr; curr1 != end(); curr1++)
-				{
-					if (!comp(*curr, *curr1))
-						mySwap(*curr, *curr1);
-				}
-			}
-		}
+	
 
 		// and here we duplicate the 'iterator' class to 'const_iterator' 
 		class const_iterator

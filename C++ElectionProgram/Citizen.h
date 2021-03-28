@@ -18,7 +18,7 @@ namespace elections
 		int _logicSize;
 		int _id;
 		int _yearOfBirth;
-		int voted=-1;//check if some1 voted already
+		int voted=-1;//check if someone voted already
 		int isDelegate = -1;
 		County* _myCounty;
 

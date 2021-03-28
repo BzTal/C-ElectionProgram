@@ -272,7 +272,7 @@ namespace elections
 			cout << "Please enter the citizen's id" << endl;
 			cin >> citizenid;
 	
-			//NOTE: VALIDATION CHECK IS BOTH IN APP AND  IN THE CTOR AS INSTRUCTED BY MOSHE IN THE FORUM! ENTER FULL CITIZEN TO SEE ERROR
+			//NOTE: VALIDATION CHECK IS BOTH IN APP AND  IN THE CTOR AS INSTRUCTED BY THE PROFFESOR IN THE FORUM! ENTER FULL CITIZEN TO SEE ERROR
 
 
 			while ((!isNineDigit(citizenid)) || (getCitizen(citizenid, citizenlist) != nullptr)|| citizenid<=0)
@@ -454,7 +454,7 @@ namespace elections
 				temp->setVoted(partyid);
 
 				list<Citizen*>* tmplst = getData(cID, countylist)->getCitizens();
-				getCitizen(citizenid, *tmplst)->setVoted(partyid);//CHECK IF WORKS!!
+				getCitizen(citizenid, *tmplst)->setVoted(partyid);
 			}
 			return;
 		}
@@ -1063,7 +1063,7 @@ namespace elections
 			cout << "Please enter the number of delegates that can be chosen" << endl;
 			cin >> numOfDelegates;
 
-			//THERE IS A CHECK FOR DELEGATE NUM BOTH IN CTOR AND IN THE FUNCTION AS INSTRUCTED BY MOSHE IN THE FORUM
+			//THERE IS A CHECK FOR DELEGATE NUM BOTH IN CTOR AND IN THE FUNCTION AS INSTRUCTED BY THE PROFFESOR IN THE FORUM
 
 			while (true)
 			{

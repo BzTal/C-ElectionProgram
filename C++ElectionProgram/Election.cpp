@@ -34,7 +34,6 @@ namespace elections
 		out.write(rcastcc(&forDate), sizeof(forDate));
 		forDate = _date->getYear();
 		out.write(rcastcc(&forDate), sizeof(forDate));
-		//CountyListNode* currC = _countylst->getHead();
 		list<County*>::const_iterator countyit;
 		out.write(rcastcc(_countyCounter), sizeof(int));
 
@@ -54,7 +53,6 @@ namespace elections
 
 			if (_citizenCounter != 0)
 			{
-				//CListNode* currCitizen = _citizenlst->getHead();
 				for (citizenit = _citizenlst.begin(); citizenit != _citizenlst.end(); citizenit++)//this loop writes into the file all the countys data//this loop writes into the file all the citizens data
 				{
 					int temp = (*citizenit)->getLogicSize();
@@ -94,7 +92,7 @@ namespace elections
 							tmp = (*citizenit)->getID();
 							out.write(rcastcc(&tmp), sizeof(int));//delegate ID
 							tmp = i + 1;
-							out.write(rcastcc(&tmp), sizeof(int));//the county the delegateis delegate of
+							out.write(rcastcc(&tmp), sizeof(int));//the county the delegate
 						}
 						i++;
 					}
@@ -232,9 +230,8 @@ namespace elections
 					tempCitizen->setDelegate();
 				}
 				a.AddCitizen(tempCitizen,_citizenlst);//adds citizen to citizen lst
-				a.getData(countyIDt,_countylst)->addCitizenToCounty(tempCitizen,_countylst);//PROBLEM HERE GOES TO C LIST
+				a.getData(countyIDt,_countylst)->addCitizenToCounty(tempCitizen,_countylst);
 				list<Citizen*>* tmplst = a.getData(countyIDt, _countylst)->getCitizens();
-				//a.getData(countyIDt,_countylst)->getCitizens()->getCitizen(citizenID)->setVoted(votedt);
 				a.getCitizen(citizenID, *tmplst)->setVoted(votedt);
 				i++;
 			}
