@@ -1,4 +1,4 @@
-This is my final project in "Object oriented programming with C++" course. 
+This is my final project in " C++ Object oriented programming" course. 
 
 This is an elections program that can run two types of elections-a simple election (has only one county) and a normal election (can handle multiple counties). 
 
